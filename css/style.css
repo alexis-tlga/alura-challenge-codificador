@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Inter);
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	height: auto;
+	width: 100%;
+	background-color: #F3F5FC;
+}
+
+.general-container {
+	display: flex;
+	justify-content: space-around;
+	margin: 15px;
+	width: 100%;
+}
+
+.logo-container {
+	width: 8%;
+}
+
+.left-container {
+	width: 55%;
+}
+
+.right-container {
+	width: 23%;
+}
+
+.components-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.buttons-container {
+	display: flex;
+	height: 7.5%;
+	justify-content: space-around;
+	margin: 20px 6px 20px 6px;
+	position: relative;
+}
+
+.box-sh-comp {
+	background-color: white;
+	border-radius: 20px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.button-first {
+	width: 45%;
+	border-radius: 20px;
+	background-color: #0A3871;
+	color: white;
+}
+
+.button-second {
+	width: 45%;
+	border-radius: 20px;
+	background-color: transparent;
+	border: 1.5px solid #0A3871;
+}
+
+.button-third {
+	width: 90%;
+	border-radius: 20px;
+	background-color: transparent;
+	border: 1.5px solid #0A3871;
+}
+
+.result-container {
+	height: 85%;
+	margin: 20px;
+}
+
+.text-container {
+	width: 100%;
+	height: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-area-encode {
+	font-family: 'Inter', sans-serif;
+	font-size: 25px;
+	color: #0A3871;
+
+	margin: 20px;
+	width: 100%;
+	height: 60%;
+	border: none;
+	background-color: transparent;
+
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+	outline: none;
+	resize: none; 
+
+}
+
+.text-area-encode::placeholder {
+	color: #0A3871;
+}
+
+
+.result-text {
+	word-wrap: break-word;
+	font-family: 'Inter', sans-serif;
+}
+
+.info-buttons {
+	position: absolute;
+	color: #495057;
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	top: -50%;
+	left: 20px;
+	/*transform: translate(-90%, -150%);*/
+}
+
+
+/*Tablet*/
+/* and if the height is 200px more bigger than the width*/
+@media screen and (max-width: 768px), ((max-height: 992px) and (min-width: 768px)) {
+	.general-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.left-container {
+		width: 100%;
+		height: 560px;
+	}
+	.right-container {
+		width: 100%;
+		height: auto;
+		min-height: 30vh;
+		max-height: 80vh;
+	}
+
+	.buttons-container {
+		height: auto;
+	}
+
+	.button-first {
+		height: 40px;
+	}
+
+	.button-second {
+		height: 40px;
+	}
+
+	.button-third {
+		height: 40px;
+	}
+
+	.result-container {
+		height: auto;
+	}
+}
