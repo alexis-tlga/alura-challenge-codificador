@@ -30,18 +30,14 @@ body {
 
 .logo-container {
 	width: 8%;
-	max-width: 8%;
 }
 
 .left-container {
 	width: 55%;
-	max-width: 55%;
 }
 
 .right-container {
 	width: 23%;
-	max-width: 23%;
-	max-height: 100%;
 }
 
 .components-container {
@@ -108,7 +104,8 @@ body {
 .text-area-encode {
 	font-family: 'Inter', sans-serif;
 	font-size: 25px;
-	color: #0A3871;
+	-webkit-text-fill-color: #0A3871;
+	color:transparent;
 
 	margin: 20px;
 	width: 100%;
@@ -137,6 +134,8 @@ body {
 	overflow-y: auto;
 	max-height: 100%;
 	height: 100%;
+	-webkit-text-fill-color: black;
+	color: transparent;
 }
 
 .info-buttons {
@@ -156,6 +155,10 @@ body {
 	.general-container {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.components-container {
+		height: auto;
 	}
 
 	.left-container {
@@ -187,5 +190,41 @@ body {
 
 	.result-container {
 		height: auto;
+		max-height: 500px;
 	}
+
+	.result-text {
+		height: auto;
+		max-height: 500px;
+	}
+
+	.no-message-image {
+		display: none;
+	}
+
+	.text-area-encode {
+		font-size: 20px;
+		height: 250px;
+	}
+}
+
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {        
+  box-shadow: inset 0 0 0 10px;
+}
+
+div:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+textarea:hover {
+  color: rgba(10, 56, 113, 0.3);
 }
