@@ -17,24 +17,34 @@
 		<div class="left-container">
 			<div class="components-container">
 				<div class="text-container">
-					<textarea class="text-area-encode"type="text" id="text-area" placeholder="Ingrese el texto aqui"></textarea>
+					<textarea 
+						class="text-area-encode"
+						type="text"
+						id="text-input"
+						placeholder="Ingrese el texto aqui"
+						onkeyup="forceLowerCase(this)"
+					></textarea>
 				</div>
 				<div class="buttons-container">
 					<div class="info-buttons">
 						<img height="10px" src="img/info-logo.svg" alt="info-logo">							
 						Solo letras minusculas y sin acentos
 					</div>
-					<button class="button-first" id="encode-button">Encriptar</button>
-					<button class="button-second" id="decode-button">Desencriptar</button>
+					<button class="button-first" id="encode-button" onclick="encodeButtonEvent()">Encriptar</button>
+					<button class="button-second" id="decode-button" onclick="decodeButtonEvent()">Desencriptar</button>
 				</div>
 			</div>
 		</div>
 		<div class="right-container">
 			<div class="components-container box-sh-comp">
-				<div class="result-container">
-					<p class="result-text">
-						
-					</p>
+				<div class="result-container" id="initial-output">
+					<img class="no-message-image" width="100%" src="img/no-message.svg" alt="no message">
+					<strong style="margin:20px;font-weight: bold;text-align: center;font-size:18px;font-family: 'Inter', sans-serif;">Ningún mensaje fue encontrado</strong>
+					<p style="color:#495057;margin:0px;text-align: center;font-size:11px;font-family: 'Inter', sans-serif;">Ingresa el texto que desees encriptar o desencriptar.</p>
+				</div>
+				<div class="result-container" style="display: none;" id="result-output">
+					<div class="result-text" id="text-output">
+					</div>
 				</div>
 				<div class="buttons-container">
 					<button class="button-third">
@@ -44,4 +54,5 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/utils.js"></script>
 </body>
