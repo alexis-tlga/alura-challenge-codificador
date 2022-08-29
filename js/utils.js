@@ -2,7 +2,6 @@ const input = document.getElementById('text-input');
 const output = document.getElementById('text-output');
 const initialOutput = document.getElementById('initial-output');
 const resultOutput = document.getElementById('result-output');
-input.onpaste = forceLowerCasePaste;
 
 
 const characterMap = {
@@ -30,7 +29,7 @@ function decode(text) {
 }
 
 function encodeButtonEvent() {
-	const text = input.value;
+	const text = input.value.toLowerCase();
 	const encodedText = encode(text);
 	if (initialOutput.style.display !== 'none') {
 		initialOutput.style.display = 'none';
@@ -42,7 +41,7 @@ function encodeButtonEvent() {
 }
 
 function decodeButtonEvent() {
-	const text = input.value;
+	const text = input.value.toLowerCase();
 	const decodedText = decode(text);
 	if (initialOutput.style.display !== 'none') {
 		initialOutput.style.display = 'none';
@@ -55,9 +54,4 @@ function decodeButtonEvent() {
 
 function forceLowerCase(event) {
 	input.value = input.value.toLowerCase();
-}
-
-function forceLowerCasePaste(event) {
-	copiedText = event.clipboardData.getData('text/plain');
-	input.value = copiedText.toLowerCase();
 }

@@ -106,6 +106,8 @@ body {
 	font-size: 25px;
 	-webkit-text-fill-color: #0A3871;
 	color:transparent;
+	cursor: auto;
+	text-transform: lowercase;
 
 	margin: 20px;
 	width: 100%;
@@ -227,4 +229,21 @@ div:hover {
 
 textarea:hover {
   color: rgba(10, 56, 113, 0.3);
+}
+
+/* buttons animations */
+
+.button-first:hover {
+	background-color: #0A3871DD;
+	cursor: pointer;
+}
+
+.button-second:hover {
+	background-color: #00000011;
+	cursor: pointer;
+}
+
+.button-third:hover {
+	background-color: #00000011;
+	cursor: pointer;
 }
